@@ -1,0 +1,212 @@
+/* Global Resets and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  background: url('/Turf_Booking/ima/v9.jpg') no-repeat center center fixed; /* Full-page background image */
+  background-size: cover; /* Make background cover entire page */
+  color: #b0bec5;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: #8ceabb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b9fbc0;
+}
+
+/* Page Wrapper */
+.page-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.5); /* Optional: Adds a semi-transparent overlay to make the form stand out */
+}
+
+/* Adjusted Form Wrapper */
+.wrapper {
+  width: 100%;
+  max-width: 500px; /* Adjusted max-width to make form smaller */
+  margin: 0 auto;
+  padding: 1rem;
+  background: #3a4756; /* Background color of the form to make it distinct */
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Card Styles */
+.card {
+  background: #3a4756;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-heading {
+  height: 150px;
+  background: linear-gradient(135deg, #8ceabb 0%, #378f7b 100%);
+  background-size: cover;
+  position: relative;
+  background-image: url('/Turf_Booking/ima/b3.jpg'); /* Optional: Background image specific to the card */
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card-body {
+  padding: 2rem; /* Adjusted padding for smaller form */
+  text-align: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2.title {
+  font-size: 2rem; /* Adjusted font size for smaller form */
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Input Group Styling */
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
+  text-align: center;
+  transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: #8ceabb;
+}
+
+input[type="email"] {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%237e8ba3"><path d="M256.017 273.436l-205.17-170.029h410.904l-205.734 170.029zm-.034 55.462l-205.983-170.654v250.349h412v-249.94l-206.017 170.245z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 1.5rem center;
+}
+
+input[type="password"] {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="%237e8ba3"><path d="M195.334 223.333h-50v-62.666c0-61.022 49.645-110.667 110.666-110.667 61.022 0 110.667 49.645 110.667 110.667v62.666h-50v-62.666c0-33.452-27.215-60.667-60.667-60.667-33.451 0-60.666 27.215-60.666 60.667v62.666zm208.666 30v208.667h-296v-208.667h296zm-121 87.667c0-14.912-12.088-27-27-27s-27 12.088-27 27c0 7.811 3.317 14.844 8.619 19.773 4.385 4.075 6.881 9.8 6.881 15.785v22.942h23v-22.941c0-5.989 2.494-11.708 6.881-15.785 5.302-4.93 8.619-11.963 8.619-19.774z"/></svg>');
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
+  background-position: 1.5rem center;
+}
+
+/* Error Message Styling */
+.valErr {
+  color: #ff6b6b;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  background-image: linear-gradient(160deg, #8ceabb 0%, #378f7b 100%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #6cc7a6;
+  transform: translateY(-3px);
+}
+
+.p-t-10 {
+  padding-top: 10px;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 1rem;
+  }
+
+  h2.title {
+    font-size: 2rem;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
