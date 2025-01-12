@@ -5,4 +5,4 @@
  
  database-mysql in wampserver
  
- It has 3 modules admin,Turf Owner,Custmoer
+ It has 3 modules admin,Turf Owner,Customer
